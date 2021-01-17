@@ -1,50 +1,35 @@
 import { AxiosHttpCLient } from './axios-http-client'
-import { HttpPostParams } from '@/data/protocols/http'
-import faker from 'faker'
+import { mockPostRequest } from '@/data/test'
+import { mockAxios } from '@/infra/test'
 import axios from 'axios'
 
 jest.mock('axios')
-const mockedAxios = axios as jest.Mocked<typeof axios>
 
-const mockedAxiosResult = {
-  data: faker.random.objectElement(),
-  status: faker.random.number()
+type SuTypes = {
+  sut: AxiosHttpCLient
+  mockedAxios: jest.Mocked<typeof axios>
 }
 
-mockedAxios.post.mockResolvedValue(mockedAxiosResult)
-
-const makerSut = (): AxiosHttpCLient => {
-  return new AxiosHttpCLient()
+const makerSut = (): SuTypes => {
+  const sut = new AxiosHttpCLient()
+  const mockedAxios = mockAxios()
+  return {
+    sut,
+    mockedAxios
+  }
 }
-
-const mockPostRequest = (): HttpPostParams<any> => ({
-  url: faker.internet.url(),
-  body: faker.random.objectElement()
-})
 
 describe('AxiosHttpClient', () => {
   test('Should call axios with correct URL, verb and body', async () => {
     const request = mockPostRequest()
-    const sut = makerSut()
+    const { sut, mockedAxios } = makerSut()
     await sut.post(request)
     expect(mockedAxios.post).toHaveBeenCalledWith(request.url, request.body)
   })
 
-  test('Should call return correct statusCode and body', async () => {
-    const sut = makerSut()
-    const httpResponse = await sut.post(mockPostRequest())
-    expect(httpResponse).toEqual({
-      statusCode: mockedAxiosResult.status,
-      body: mockedAxiosResult.data
-    })
-  })
-
-  test('Should call return correct statusCode and body', async () => {
-    const sut = makerSut()
-    const httpResponse = await sut.post(mockPostRequest())
-    expect(httpResponse).toEqual({
-      statusCode: mockedAxiosResult.status,
-      body: mockedAxiosResult.data
-    })
+  test('Should call return correct statusCode and body', () => {
+    const { sut, mockedAxios } = makerSut()
+    const promise = sut.post(mockPostRequest())
+    expect(promise).toEqual(mockedAxios.post.mock.results[0].value)
   })
 })
