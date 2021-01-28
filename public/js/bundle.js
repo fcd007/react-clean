@@ -566,7 +566,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"react-dom\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _presentation_pages_login_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/presentation/pages/login/login */ \"./src/presentation/pages/login/login.tsx\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentation_pages_login_login__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), document.getElementById('main'));\n\n\n//# sourceURL=webpack:///./src/main/index.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ \"react-dom\");\n/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _presentation_pages___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/presentation/pages/ */ \"./src/presentation/pages/index.ts\");\n\n\n\nreact_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_presentation_pages___WEBPACK_IMPORTED_MODULE_2__[\"Login\"], null), document.getElementById('main'));\n\n\n//# sourceURL=webpack:///./src/main/index.tsx?");
 
 /***/ }),
 
@@ -711,6 +711,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _spinner_styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./spinner-styles.scss */ \"./src/presentation/components/spinner/spinner-styles.scss\");\n\n\nconst Spinner = (props) => {\n    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", Object.assign({}, props, { className: [_spinner_styles_scss__WEBPACK_IMPORTED_MODULE_1__[\"default\"].spinner, props.className].join(' ') }),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null),\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null),\n        \" \",\n        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null)));\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Spinner);\n\n\n//# sourceURL=webpack:///./src/presentation/components/spinner/spinner.tsx?");
+
+/***/ }),
+
+/***/ "./src/presentation/pages/index.ts":
+/*!*****************************************!*\
+  !*** ./src/presentation/pages/index.ts ***!
+  \*****************************************/
+/*! exports provided: Login */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _presentation_pages_login_login__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/presentation/pages/login/login */ \"./src/presentation/pages/login/login.tsx\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Login\", function() { return _presentation_pages_login_login__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./src/presentation/pages/index.ts?");
 
 /***/ }),
 
