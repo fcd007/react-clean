@@ -1,5 +1,6 @@
 export { default as Logo } from './logo/logo'
 export { default as Input } from './input/input'
+export { default as Router } from './router/router'
 export { default as Footer } from './footer/footer'
 export { default as Spinner } from './spinner/spinner'
 export { default as Header } from './login-header/login-header'
