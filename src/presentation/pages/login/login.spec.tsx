@@ -4,6 +4,7 @@ import Login from './login'
 
 describe('Login Component', () => {
   test('', () => {
-    render(<Login />)
+    render(<Login />
+    )
   })
 })
