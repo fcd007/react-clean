@@ -4,7 +4,8 @@ import Login from './login'
 
 describe('Login Component', () => {
   test('Shoud not render spinner and error on start', () => {
-    render(<Login />
-    )
+    const { getByTestId } = render(<Login />)
+    const errorWrap = getByTestId('error-wrap')
+    expect(errorWrap.childElementCount).toBe(0)
   })
 })
