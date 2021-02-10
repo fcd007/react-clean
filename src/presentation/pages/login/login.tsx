@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { LoginHeader, Input, FormStatus, Footer } from '@/presentation/components'
 import { Validation } from '@/validation/protocols/validation'
 import { Authentication } from '@/domain/usecases/authentication'
@@ -12,6 +12,7 @@ type Props = {
 }
 
 const Login: React.FC<Props> = ({ validation, authentication }) => {
+  const history = useHistory()
   const [state, setState] = useState({
     isLoading: false,
     email: '',
@@ -41,6 +42,7 @@ const Login: React.FC<Props> = ({ validation, authentication }) => {
         password: state.password
       })
       localStorage.setItem('accessToken', account.acessToken)
+      history.replace('/')
     } catch (error) {
       setState({
         ...state,
