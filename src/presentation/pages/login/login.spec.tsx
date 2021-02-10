@@ -60,7 +60,7 @@ const populatePasswordField = (
   fireEvent.input(passwordInput, { target: { value: password } })
 }
 
-const simulateStatusForField = (sut: RenderResult, fieldName: string, validationError?: string): void => {
+const testStatusForField = (sut: RenderResult, fieldName: string, validationError?: string): void => {
   const emailStatus = sut.getByTestId(`${fieldName}-status`)
   expect(emailStatus.title).toBe(validationError || 'Tudo certo!')
   expect(emailStatus.textContent).toBe(validationError ? '🔴' : '🟢')
@@ -80,34 +80,34 @@ describe('Login Component', () => {
     expect(errorWrap.childElementCount).toBe(0)
     const submitButton = sut.getByTestId('submit') as HTMLButtonElement
     expect(submitButton.disabled).toBe(true)
-    simulateStatusForField(sut, 'email', validationError)
-    simulateStatusForField(sut, 'password', validationError)
+    testStatusForField(sut, 'email', validationError)
+    testStatusForField(sut, 'password', validationError)
   })
 
   test('Shoud show email error if Validation fails', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
     populateMailField(sut)
-    simulateStatusForField(sut, 'email', validationError)
+    testStatusForField(sut, 'email', validationError)
   })
 
   test('Shoud show password error if Validation fails', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
     populatePasswordField(sut)
-    simulateStatusForField(sut, 'password', validationError)
+    testStatusForField(sut, 'password', validationError)
   })
 
   test('Shoud show valid email state if Validation succeeds', () => {
     const { sut } = makeSut()
     populateMailField(sut)
-    simulateStatusForField(sut, 'email')
+    testStatusForField(sut, 'email')
   })
 
   test('Shoud show valid password state if Validation succeeds', () => {
     const { sut } = makeSut()
     populatePasswordField(sut)
-    simulateStatusForField(sut, 'password')
+    testStatusForField(sut, 'password')
   })
 
   test('Shoud enable submit button if form is valid', () => {
