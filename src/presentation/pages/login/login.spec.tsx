@@ -73,7 +73,7 @@ describe('Login Component', () => {
     localStorage.clear()
   })
 
-  test('Shoud not render spinner and error on init', () => {
+  test('Shoud not render spinner error on init', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
     const errorWrap = sut.getByTestId('error-wrap')
