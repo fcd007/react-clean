@@ -1,1 +1,1 @@
-export * from './required-field-validation'
+export * from '@/validation/validators/required-field/required-field-validation'
