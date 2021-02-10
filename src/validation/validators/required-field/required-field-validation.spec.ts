@@ -4,7 +4,7 @@ import { RequiredFieldError } from '@/validation/errors'
 
 const makeSut = (): RequiredFieldValidation => new RequiredFieldValidation(faker.database.column())
 
-describe('', () => {
+describe('FieldValidation', () => {
   test('should return error if field is empty', () => {
     const sut = makeSut()
     const error = sut.validate('')
