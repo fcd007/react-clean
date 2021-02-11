@@ -1,5 +1,5 @@
 import { RequiredFieldValidation } from '@/validation'
-import { FieldValidation } from './../../protocols/field-validation'
+import { FieldValidation } from '@/validation/protocols'
 
 export class ValidationBuilder {
   private constructor (
