@@ -1,6 +1,6 @@
 import faker from 'faker'
 import { InvalidFieldError } from '@/validation/errors'
-import { EmailValidation } from '@/validation/validators/email'
+import { EmailValidation } from '@/validation/validators/'
 
 const makeSut = (): EmailValidation => new EmailValidation(faker.database.column())
 
