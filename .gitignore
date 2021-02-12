@@ -1,3 +1,24 @@
 node_modules
 .vscode
 coverage
+# configuration git --global local
+# Configurações de editor git
+# - primeiro comando para editar editor
+# -- git config --global --edit  
+# para poder definir o vs code como editor padrão
+# -- git config --global core.editor code
+#  -- vamos deixar nossa configuração padrão --
+
+#  [user]
+# 	email = johnwick@email.com
+# 	name = john Wick
+# [core]
+# 	editor = code
+# [push]
+# 	followTags = true
+# [alias] 
+# 	c = !git add --all && git commit -m
+# 	s = !git status -s
+# 	l = !git log --pretty=format:'%C(blue)%h%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+# 	amend = !git add --all && git commit --amend --no-edit
+# 	count = !git shortlog -s --grep
