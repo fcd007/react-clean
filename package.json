@@ -1,7 +1,8 @@
 {
   "name": "react-clean",
   "version": "1.0.0",
-  "description": "",
+  "description": "ReactJS Frontend using TDD, Clean Architecture and Typescript",
+  "author": "Claudeilton Dantas",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --open",
@@ -11,7 +12,6 @@
     "test:ci": "yarn test -- --coverage"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-typescript": "^7.12.7",
