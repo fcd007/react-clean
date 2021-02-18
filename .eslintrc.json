@@ -6,6 +6,8 @@
     "rules": {
         "@typescript-eslint/consistent-type-definitions": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/comma-spacing": "off",
+        "@typescript-eslint/return-await": "off",
         "no-redeclare": "off",
         "@typescript-eslint/no-redeclare": ["error"]
     }
