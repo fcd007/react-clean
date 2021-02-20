@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "webpack serve --open",
     "test": "jest --passWithNoTests --no-cache --runInBand",
-    "test:watch": "npm run test -- --watch",
-    "test:staged": "npm run test -- --findRelatedTests",
-    "test:ci": "npm run test -- --coverage",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage",
+    "test:coveralls": "npm run test:ci && coveralls < coveralls/lcov.info",
     "check": "npm-check -u -s"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
     "clean-webpack-plugin": "^3.0.0",
+    "coveralls": "^3.1.0",
     "css-loader": "^5.0.2",
     "eslint": "^7.20.0",
     "eslint-config-standard-with-typescript": "^20.0.0",
