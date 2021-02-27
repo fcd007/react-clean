@@ -1000,7 +1000,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makerApiUrl\": () => (/* binding */ makerApiUrl)\n/* harmony export */ });\nconst makerApiUrl = (path) => {\n    return `process.env.API_URL${path}`;\n};\n\n\n//# sourceURL=webpack://react-clean/./src/main/factories/http/api-url-factory.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"makerApiUrl\": () => (/* binding */ makerApiUrl)\n/* harmony export */ });\nconst makerApiUrl = (path) => {\n    return `${\"http://fordevs.herokuapp.com/api\"}${path}`;\n};\n\n\n//# sourceURL=webpack://react-clean/./src/main/factories/http/api-url-factory.ts?");
 
 /***/ }),
 
