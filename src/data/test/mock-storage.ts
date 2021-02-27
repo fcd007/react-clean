@@ -2,8 +2,8 @@ import { SetStorage } from '../protocols/cache'
 
 export class SetStorageMock implements SetStorage {
   key: string
-  value: unknown
-  async set (key: string, value: unknown): Promise<void> {
+  value: any
+  async set (key: string, value: any): Promise<void> {
     this.key = key
     this.value = value
   }
